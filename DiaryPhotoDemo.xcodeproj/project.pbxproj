@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		79F6505B6668D0385B9B771F /* libPods-DiaryPhotoDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C8210DCA0D621B198C71E8 /* libPods-DiaryPhotoDemo.a */; };
+		FB046B611FFC7302009CAA82 /* infowindow_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = FB046B601FFC7302009CAA82 /* infowindow_bg.png */; };
+		FB3F8FE51FF0D4890037D4EB /* ListImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3F8FE31FF0D4890037D4EB /* ListImageTableViewCell.swift */; };
+		FB3F8FE61FF0D4890037D4EB /* ListImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB3F8FE41FF0D4890037D4EB /* ListImageTableViewCell.xib */; };
+		FB3F8FE81FF0DA2C0037D4EB /* ImagesCreateByDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3F8FE71FF0DA2C0037D4EB /* ImagesCreateByDate.swift */; };
+		FB3F8FEB1FF0FC570037D4EB /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB3F8FEA1FF0FC570037D4EB /* HeaderView.xib */; };
+		FB3F8FED1FF0FC6B0037D4EB /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3F8FEC1FF0FC6B0037D4EB /* HeaderView.swift */; };
+		FBA8F8421FFB61F100326978 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA8F8401FFB61F100326978 /* VideoTableViewCell.swift */; };
+		FBA8F8431FFB61F100326978 /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBA8F8411FFB61F100326978 /* VideoTableViewCell.xib */; };
+		FBA8F8461FFB626F00326978 /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA8F8441FFB626F00326978 /* MapTableViewCell.swift */; };
+		FBA8F8471FFB626F00326978 /* MapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBA8F8451FFB626F00326978 /* MapTableViewCell.xib */; };
+		FBAB11371FF1F8F200B658A0 /* CreateVideoFromImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAB11361FF1F8F200B658A0 /* CreateVideoFromImages.swift */; };
+		FBB10BBA1FFCC3420097FA62 /* CustomMarkers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB10BB91FFCC3420097FA62 /* CustomMarkers.swift */; };
+		FBB659581FF4AAD6004C47B1 /* 01 The Moment.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBB659571FF4AAD6004C47B1 /* 01 The Moment.mp3 */; };
+		FBCE95351FECA0E4002C84A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCE95341FECA0E4002C84A8 /* AppDelegate.swift */; };
+		FBCE953C1FECA0E4002C84A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBCE953B1FECA0E4002C84A8 /* Assets.xcassets */; };
+		FBCE953F1FECA0E4002C84A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCE953D1FECA0E4002C84A8 /* LaunchScreen.storyboard */; };
+		FBCE954C1FECA9FC002C84A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCE954A1FECA9FC002C84A8 /* HomeViewController.swift */; };
+		FBCE954D1FECA9FC002C84A8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBCE954B1FECA9FC002C84A8 /* HomeViewController.xib */; };
+		FBCE95521FECAD39002C84A8 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCE95501FECAD39002C84A8 /* ImageCollectionViewCell.swift */; };
+		FBCE95531FECAD39002C84A8 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBCE95511FECAD39002C84A8 /* ImageCollectionViewCell.xib */; };
+		FBCE95581FECC4CB002C84A8 /* ImageInfor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCE95571FECC4CB002C84A8 /* ImageInfor.swift */; };
+		FBCE955C1FECEA45002C84A8 /* DetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCE955A1FECEA45002C84A8 /* DetailImageViewController.swift */; };
+		FBCE955D1FECEA45002C84A8 /* DetailImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBCE955B1FECEA45002C84A8 /* DetailImageViewController.xib */; };
+		FBCE95681FECF4CF002C84A8 /* DetailPortrailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCE95661FECF4CF002C84A8 /* DetailPortrailCollectionViewCell.swift */; };
+		FBCE95691FECF4CF002C84A8 /* DetailPortrailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBCE95671FECF4CF002C84A8 /* DetailPortrailCollectionViewCell.xib */; };
+		FBCE956C1FECF4E4002C84A8 /* DetailLanscapeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCE956A1FECF4E4002C84A8 /* DetailLanscapeCollectionViewCell.swift */; };
+		FBCE956D1FECF4E4002C84A8 /* DetailLanscapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBCE956B1FECF4E4002C84A8 /* DetailLanscapeCollectionViewCell.xib */; };
+		FBE3941F1FFDBF0B00163AF2 /* NewMapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE3941D1FFDBF0B00163AF2 /* NewMapTableViewCell.swift */; };
+		FBE394201FFDBF0B00163AF2 /* NewMapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBE3941E1FFDBF0B00163AF2 /* NewMapTableViewCell.xib */; };
+		FBE394241FFDE03000163AF2 /* ImagesMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE394221FFDE03000163AF2 /* ImagesMapViewController.swift */; };
+		FBE394251FFDE03000163AF2 /* ImagesMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBE394231FFDE03000163AF2 /* ImagesMapViewController.xib */; };
+		FBF409711FF38697003BEF59 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF4096F1FF38697003BEF59 /* PlayVideoViewController.swift */; };
+		FBF409721FF38697003BEF59 /* PlayVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBF409701FF38697003BEF59 /* PlayVideoViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8EFCA7567E63BFCAAD21E4E7 /* Pods-DiaryPhotoDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiaryPhotoDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiaryPhotoDemo/Pods-DiaryPhotoDemo.release.xcconfig"; sourceTree = "<group>"; };
+		9086FDDD87F7C08FC744B36E /* Pods-DiaryPhotoDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiaryPhotoDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiaryPhotoDemo/Pods-DiaryPhotoDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A8C8210DCA0D621B198C71E8 /* libPods-DiaryPhotoDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DiaryPhotoDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB046B601FFC7302009CAA82 /* infowindow_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = infowindow_bg.png; sourceTree = "<group>"; };
+		FB3F8FE31FF0D4890037D4EB /* ListImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListImageTableViewCell.swift; sourceTree = "<group>"; };
+		FB3F8FE41FF0D4890037D4EB /* ListImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListImageTableViewCell.xib; sourceTree = "<group>"; };
+		FB3F8FE71FF0DA2C0037D4EB /* ImagesCreateByDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCreateByDate.swift; sourceTree = "<group>"; };
+		FB3F8FEA1FF0FC570037D4EB /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		FB3F8FEC1FF0FC6B0037D4EB /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		FBA8F8401FFB61F100326978 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		FBA8F8411FFB61F100326978 /* VideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTableViewCell.xib; sourceTree = "<group>"; };
+		FBA8F8441FFB626F00326978 /* MapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
+		FBA8F8451FFB626F00326978 /* MapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapTableViewCell.xib; sourceTree = "<group>"; };
+		FBA8F8481FFB75BE00326978 /* DiaryPhotoDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DiaryPhotoDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		FBAB11361FF1F8F200B658A0 /* CreateVideoFromImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVideoFromImages.swift; sourceTree = "<group>"; };
+		FBB10BB91FFCC3420097FA62 /* CustomMarkers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkers.swift; sourceTree = "<group>"; };
+		FBB659571FF4AAD6004C47B1 /* 01 The Moment.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01 The Moment.mp3"; sourceTree = "<group>"; };
+		FBCE95311FECA0E4002C84A8 /* DiaryPhotoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiaryPhotoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBCE95341FECA0E4002C84A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FBCE953B1FECA0E4002C84A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FBCE953E1FECA0E4002C84A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FBCE95401FECA0E4002C84A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBCE954A1FECA9FC002C84A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FBCE954B1FECA9FC002C84A8 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		FBCE95501FECAD39002C84A8 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		FBCE95511FECAD39002C84A8 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		FBCE95571FECC4CB002C84A8 /* ImageInfor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInfor.swift; sourceTree = "<group>"; };
+		FBCE955A1FECEA45002C84A8 /* DetailImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageViewController.swift; sourceTree = "<group>"; };
+		FBCE955B1FECEA45002C84A8 /* DetailImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailImageViewController.xib; sourceTree = "<group>"; };
+		FBCE95661FECF4CF002C84A8 /* DetailPortrailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPortrailCollectionViewCell.swift; sourceTree = "<group>"; };
+		FBCE95671FECF4CF002C84A8 /* DetailPortrailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPortrailCollectionViewCell.xib; sourceTree = "<group>"; };
+		FBCE956A1FECF4E4002C84A8 /* DetailLanscapeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLanscapeCollectionViewCell.swift; sourceTree = "<group>"; };
+		FBCE956B1FECF4E4002C84A8 /* DetailLanscapeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailLanscapeCollectionViewCell.xib; sourceTree = "<group>"; };
+		FBE3941D1FFDBF0B00163AF2 /* NewMapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMapTableViewCell.swift; sourceTree = "<group>"; };
+		FBE3941E1FFDBF0B00163AF2 /* NewMapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewMapTableViewCell.xib; sourceTree = "<group>"; };
+		FBE394221FFDE03000163AF2 /* ImagesMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesMapViewController.swift; sourceTree = "<group>"; };
+		FBE394231FFDE03000163AF2 /* ImagesMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagesMapViewController.xib; sourceTree = "<group>"; };
+		FBF4096F1FF38697003BEF59 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
+		FBF409701FF38697003BEF59 /* PlayVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayVideoViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FBCE952E1FECA0E4002C84A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79F6505B6668D0385B9B771F /* libPods-DiaryPhotoDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CFAA234B7FA3E250615A49FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8C8210DCA0D621B198C71E8 /* libPods-DiaryPhotoDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F00B0AD824AEAED8226D0FA4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9086FDDD87F7C08FC744B36E /* Pods-DiaryPhotoDemo.debug.xcconfig */,
+				8EFCA7567E63BFCAAD21E4E7 /* Pods-DiaryPhotoDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FB046B5F1FFC72C4009CAA82 /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				FB046B601FFC7302009CAA82 /* infowindow_bg.png */,
+			);
+			path = Pictures;
+			sourceTree = "<group>";
+		};
+		FB3F8FE91FF0FC430037D4EB /* headerView */ = {
+			isa = PBXGroup;
+			children = (
+				FB3F8FEA1FF0FC570037D4EB /* HeaderView.xib */,
+				FB3F8FEC1FF0FC6B0037D4EB /* HeaderView.swift */,
+			);
+			path = headerView;
+			sourceTree = "<group>";
+		};
+		FBA8F83E1FFB60DC00326978 /* VideoCell */ = {
+			isa = PBXGroup;
+			children = (
+				FBA8F8401FFB61F100326978 /* VideoTableViewCell.swift */,
+				FBA8F8411FFB61F100326978 /* VideoTableViewCell.xib */,
+			);
+			path = VideoCell;
+			sourceTree = "<group>";
+		};
+		FBA8F83F1FFB611500326978 /* MapCell */ = {
+			isa = PBXGroup;
+			children = (
+				FBA8F8441FFB626F00326978 /* MapTableViewCell.swift */,
+				FBA8F8451FFB626F00326978 /* MapTableViewCell.xib */,
+				FBE3941D1FFDBF0B00163AF2 /* NewMapTableViewCell.swift */,
+				FBE3941E1FFDBF0B00163AF2 /* NewMapTableViewCell.xib */,
+			);
+			path = MapCell;
+			sourceTree = "<group>";
+		};
+		FBB659561FF4AACA004C47B1 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				FBB659571FF4AAD6004C47B1 /* 01 The Moment.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		FBCE95281FECA0E4002C84A8 = {
+			isa = PBXGroup;
+			children = (
+				FBCE95331FECA0E4002C84A8 /* DiaryPhotoDemo */,
+				FBCE95321FECA0E4002C84A8 /* Products */,
+				F00B0AD824AEAED8226D0FA4 /* Pods */,
+				CFAA234B7FA3E250615A49FA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FBCE95321FECA0E4002C84A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBCE95311FECA0E4002C84A8 /* DiaryPhotoDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FBCE95331FECA0E4002C84A8 /* DiaryPhotoDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FB046B5F1FFC72C4009CAA82 /* Pictures */,
+				FBB659561FF4AACA004C47B1 /* Music */,
+				FBCE95561FECC4AF002C84A8 /* Model */,
+				FBCE95481FECA9E0002C84A8 /* Screen */,
+				FBCE95341FECA0E4002C84A8 /* AppDelegate.swift */,
+				FBCE953B1FECA0E4002C84A8 /* Assets.xcassets */,
+				FBCE953D1FECA0E4002C84A8 /* LaunchScreen.storyboard */,
+				FBCE95401FECA0E4002C84A8 /* Info.plist */,
+				FBA8F8481FFB75BE00326978 /* DiaryPhotoDemo-Bridging-Header.h */,
+			);
+			path = DiaryPhotoDemo;
+			sourceTree = "<group>";
+		};
+		FBCE95481FECA9E0002C84A8 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				FBE394211FFDE00D00163AF2 /* ImagesMapScreen */,
+				FBF4096D1FF385E2003BEF59 /* PlayVideoScreen */,
+				FBCE95591FECE907002C84A8 /* DetailImageScreen */,
+				FBCE95491FECA9E6002C84A8 /* HomeScreen */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		FBCE95491FECA9E6002C84A8 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FBCE954F1FECAD00002C84A8 /* View */,
+				FBCE954E1FECACF7002C84A8 /* ViewController */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		FBCE954E1FECACF7002C84A8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FBCE954A1FECA9FC002C84A8 /* HomeViewController.swift */,
+				FBCE954B1FECA9FC002C84A8 /* HomeViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FBCE954F1FECAD00002C84A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB3F8FE91FF0FC430037D4EB /* headerView */,
+				FBCE95501FECAD39002C84A8 /* ImageCollectionViewCell.swift */,
+				FBCE95511FECAD39002C84A8 /* ImageCollectionViewCell.xib */,
+				FB3F8FE31FF0D4890037D4EB /* ListImageTableViewCell.swift */,
+				FB3F8FE41FF0D4890037D4EB /* ListImageTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FBCE95561FECC4AF002C84A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FBCE95571FECC4CB002C84A8 /* ImageInfor.swift */,
+				FB3F8FE71FF0DA2C0037D4EB /* ImagesCreateByDate.swift */,
+				FBAB11361FF1F8F200B658A0 /* CreateVideoFromImages.swift */,
+				FBB10BB91FFCC3420097FA62 /* CustomMarkers.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FBCE95591FECE907002C84A8 /* DetailImageScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FBCE955F1FECEC23002C84A8 /* View */,
+				FBCE955E1FECEC1B002C84A8 /* ViewController */,
+			);
+			path = DetailImageScreen;
+			sourceTree = "<group>";
+		};
+		FBCE955E1FECEC1B002C84A8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FBCE955A1FECEA45002C84A8 /* DetailImageViewController.swift */,
+				FBCE955B1FECEA45002C84A8 /* DetailImageViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FBCE955F1FECEC23002C84A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FBA8F83F1FFB611500326978 /* MapCell */,
+				FBA8F83E1FFB60DC00326978 /* VideoCell */,
+				FBCE95651FECF012002C84A8 /* Lanscape */,
+				FBCE95641FECF00A002C84A8 /* Portrail */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FBCE95641FECF00A002C84A8 /* Portrail */ = {
+			isa = PBXGroup;
+			children = (
+				FBCE95661FECF4CF002C84A8 /* DetailPortrailCollectionViewCell.swift */,
+				FBCE95671FECF4CF002C84A8 /* DetailPortrailCollectionViewCell.xib */,
+			);
+			path = Portrail;
+			sourceTree = "<group>";
+		};
+		FBCE95651FECF012002C84A8 /* Lanscape */ = {
+			isa = PBXGroup;
+			children = (
+				FBCE956A1FECF4E4002C84A8 /* DetailLanscapeCollectionViewCell.swift */,
+				FBCE956B1FECF4E4002C84A8 /* DetailLanscapeCollectionViewCell.xib */,
+			);
+			path = Lanscape;
+			sourceTree = "<group>";
+		};
+		FBE394211FFDE00D00163AF2 /* ImagesMapScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FBE394221FFDE03000163AF2 /* ImagesMapViewController.swift */,
+				FBE394231FFDE03000163AF2 /* ImagesMapViewController.xib */,
+			);
+			path = ImagesMapScreen;
+			sourceTree = "<group>";
+		};
+		FBF4096D1FF385E2003BEF59 /* PlayVideoScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FBF4096E1FF385F6003BEF59 /* ViewController */,
+			);
+			path = PlayVideoScreen;
+			sourceTree = "<group>";
+		};
+		FBF4096E1FF385F6003BEF59 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FBF4096F1FF38697003BEF59 /* PlayVideoViewController.swift */,
+				FBF409701FF38697003BEF59 /* PlayVideoViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FBCE95301FECA0E4002C84A8 /* DiaryPhotoDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBCE95431FECA0E4002C84A8 /* Build configuration list for PBXNativeTarget "DiaryPhotoDemo" */;
+			buildPhases = (
+				984C6D4D4F219C97ED986FA7 /* [CP] Check Pods Manifest.lock */,
+				FBCE952D1FECA0E4002C84A8 /* Sources */,
+				FBCE952E1FECA0E4002C84A8 /* Frameworks */,
+				FBCE952F1FECA0E4002C84A8 /* Resources */,
+				632F8B66C7C500555941B752 /* [CP] Embed Pods Frameworks */,
+				29AFB1D898974267443D3E16 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DiaryPhotoDemo;
+			productName = DiaryPhotoDemo;
+			productReference = FBCE95311FECA0E4002C84A8 /* DiaryPhotoDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FBCE95291FECA0E4002C84A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Kien Nguyen";
+				TargetAttributes = {
+					FBCE95301FECA0E4002C84A8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FBCE952C1FECA0E4002C84A8 /* Build configuration list for PBXProject "DiaryPhotoDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FBCE95281FECA0E4002C84A8;
+			productRefGroup = FBCE95321FECA0E4002C84A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FBCE95301FECA0E4002C84A8 /* DiaryPhotoDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FBCE952F1FECA0E4002C84A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBCE95691FECF4CF002C84A8 /* DetailPortrailCollectionViewCell.xib in Resources */,
+				FBCE953F1FECA0E4002C84A8 /* LaunchScreen.storyboard in Resources */,
+				FBE394201FFDBF0B00163AF2 /* NewMapTableViewCell.xib in Resources */,
+				FBF409721FF38697003BEF59 /* PlayVideoViewController.xib in Resources */,
+				FBCE955D1FECEA45002C84A8 /* DetailImageViewController.xib in Resources */,
+				FBCE953C1FECA0E4002C84A8 /* Assets.xcassets in Resources */,
+				FBA8F8431FFB61F100326978 /* VideoTableViewCell.xib in Resources */,
+				FBA8F8471FFB626F00326978 /* MapTableViewCell.xib in Resources */,
+				FBB659581FF4AAD6004C47B1 /* 01 The Moment.mp3 in Resources */,
+				FBCE95531FECAD39002C84A8 /* ImageCollectionViewCell.xib in Resources */,
+				FB046B611FFC7302009CAA82 /* infowindow_bg.png in Resources */,
+				FB3F8FE61FF0D4890037D4EB /* ListImageTableViewCell.xib in Resources */,
+				FB3F8FEB1FF0FC570037D4EB /* HeaderView.xib in Resources */,
+				FBCE954D1FECA9FC002C84A8 /* HomeViewController.xib in Resources */,
+				FBCE956D1FECF4E4002C84A8 /* DetailLanscapeCollectionViewCell.xib in Resources */,
+				FBE394251FFDE03000163AF2 /* ImagesMapViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29AFB1D898974267443D3E16 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DiaryPhotoDemo/Pods-DiaryPhotoDemo-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiaryPhotoDemo/Pods-DiaryPhotoDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		632F8B66C7C500555941B752 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiaryPhotoDemo/Pods-DiaryPhotoDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		984C6D4D4F219C97ED986FA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DiaryPhotoDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FBCE952D1FECA0E4002C84A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBE3941F1FFDBF0B00163AF2 /* NewMapTableViewCell.swift in Sources */,
+				FBE394241FFDE03000163AF2 /* ImagesMapViewController.swift in Sources */,
+				FBCE95581FECC4CB002C84A8 /* ImageInfor.swift in Sources */,
+				FBA8F8421FFB61F100326978 /* VideoTableViewCell.swift in Sources */,
+				FB3F8FE51FF0D4890037D4EB /* ListImageTableViewCell.swift in Sources */,
+				FB3F8FE81FF0DA2C0037D4EB /* ImagesCreateByDate.swift in Sources */,
+				FBCE956C1FECF4E4002C84A8 /* DetailLanscapeCollectionViewCell.swift in Sources */,
+				FBCE95521FECAD39002C84A8 /* ImageCollectionViewCell.swift in Sources */,
+				FBAB11371FF1F8F200B658A0 /* CreateVideoFromImages.swift in Sources */,
+				FB3F8FED1FF0FC6B0037D4EB /* HeaderView.swift in Sources */,
+				FBCE95351FECA0E4002C84A8 /* AppDelegate.swift in Sources */,
+				FBF409711FF38697003BEF59 /* PlayVideoViewController.swift in Sources */,
+				FBA8F8461FFB626F00326978 /* MapTableViewCell.swift in Sources */,
+				FBCE954C1FECA9FC002C84A8 /* HomeViewController.swift in Sources */,
+				FBCE95681FECF4CF002C84A8 /* DetailPortrailCollectionViewCell.swift in Sources */,
+				FBB10BBA1FFCC3420097FA62 /* CustomMarkers.swift in Sources */,
+				FBCE955C1FECEA45002C84A8 /* DetailImageViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FBCE953D1FECA0E4002C84A8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBCE953E1FECA0E4002C84A8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FBCE95411FECA0E4002C84A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FBCE95421FECA0E4002C84A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FBCE95441FECA0E4002C84A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9086FDDD87F7C08FC744B36E /* Pods-DiaryPhotoDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6TYQTXBT26;
+				INFOPLIST_FILE = DiaryPhotoDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KienNguyen.DiaryPhotoDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/apple/Desktop/Demo/DiaryPhotoDemo/DiaryPhotoDemo/DiaryPhotoDemo-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FBCE95451FECA0E4002C84A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EFCA7567E63BFCAAD21E4E7 /* Pods-DiaryPhotoDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6TYQTXBT26;
+				INFOPLIST_FILE = DiaryPhotoDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KienNguyen.DiaryPhotoDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/apple/Desktop/Demo/DiaryPhotoDemo/DiaryPhotoDemo/DiaryPhotoDemo-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FBCE952C1FECA0E4002C84A8 /* Build configuration list for PBXProject "DiaryPhotoDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBCE95411FECA0E4002C84A8 /* Debug */,
+				FBCE95421FECA0E4002C84A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBCE95431FECA0E4002C84A8 /* Build configuration list for PBXNativeTarget "DiaryPhotoDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBCE95441FECA0E4002C84A8 /* Debug */,
+				FBCE95451FECA0E4002C84A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FBCE95291FECA0E4002C84A8 /* Project object */;
+}

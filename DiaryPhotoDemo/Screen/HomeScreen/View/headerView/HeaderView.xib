@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderView" customModule="DiaryPhotoDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="showAll" destination="z1M-od-NzR" id="Wdf-04-NS6"/>
+                <outlet property="title" destination="vUK-wL-RmN" id="rWG-CG-ZKU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="41"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUK-wL-RmN">
+                    <rect key="frame" x="20" y="0.0" width="44.5" height="41"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1M-od-NzR">
+                    <rect key="frame" x="350" y="8.5" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="gOv-ME-b0y"/>
+                        <constraint firstAttribute="width" constant="25" id="hCe-1n-xu1"/>
+                    </constraints>
+                    <state key="normal" image="forwardBtn"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUK-wL-RmN" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="0kM-eT-2fi"/>
+                <constraint firstItem="z1M-od-NzR" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="NpV-gB-d1v"/>
+                <constraint firstItem="vUK-wL-RmN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="kBG-aM-Dqt"/>
+                <constraint firstItem="z1M-od-NzR" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="mbZ-Ga-bcD"/>
+                <constraint firstItem="vUK-wL-RmN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="r3S-4r-eWg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="25.5" y="68.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="forwardBtn" width="50" height="50"/>
+    </resources>
+</document>
