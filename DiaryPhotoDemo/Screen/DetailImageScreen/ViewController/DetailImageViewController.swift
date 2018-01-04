@@ -16,6 +16,7 @@ class DetailImageViewController: UIViewController {
     @IBOutlet weak var tableViewDetail: UITableView!
     
     var images: [UIImage] = []
+    var listImageCreateDate = [ImagesCreateByDate]()
     var imagesCreateByDate: ImagesCreateByDate!{
         didSet{
             if let imagesInfors = imagesCreateByDate.imagesCreateByDate{
@@ -67,6 +68,7 @@ extension DetailImageViewController: UITableViewDelegate, UITableViewDataSource{
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "MapCell", for: indexPath) as! MapTableViewCell
             cell.imagesCreateByDate = imagesCreateByDate
+            cell.delegate = self			
             return cell
         }
         //return UICollectionViewCell()
@@ -101,12 +103,14 @@ extension DetailImageViewController: UITableViewDelegate, UITableViewDataSource{
         return ""
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let currentSection = indexPath.section
-        if currentSection == 1{
-            print("kien test")
-            let vc = ImagesMapViewController()
-            navigationController?.pushViewController(vc, animated: true)
-        }
+//        let currentSection = indexPath.section
+//        if currentSection == 1{
+//            print("kien test")
+//            let vc = ImagesMapViewController()
+//            vc.listImageCreateDate = listImageCreateDate
+//            //vc.location = location
+//            navigationController?.pushViewController(vc, animated: true)
+//        }
     }
 }
 
@@ -119,3 +123,11 @@ extension DetailImageViewController: VideoCellProtocol{
     }
 }
 
+extension DetailImageViewController: MapCellProtocol{
+    func showMap(location: CLLocationCoordinate2D) {
+        let vc = ImagesMapViewController()
+        vc.listImageCreateDate = listImageCreateDate
+        vc.location = location
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}

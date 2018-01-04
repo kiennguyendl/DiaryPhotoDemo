@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var photosTableView: UITableView!
     var listImageInfor: [ImageInfor] = []
+    var listImageHasLocation: [ImagesCreateByDate] = []
     var listImageCreateDate = [ImagesCreateByDate]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +72,7 @@ class HomeViewController: UIViewController {
                     guard let strongSelf = self else{return}
                     //strongSelf.listImageCreateDate = data
                     strongSelf.listImageCreateDate = strongSelf.convertDictToArray(dict: data)
+                    
                     print(strongSelf.listImageCreateDate)
                     DispatchQueue.main.async {
                         strongSelf.photosTableView.reloadData()
@@ -237,6 +239,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
 //        let vc = PlayVideoViewController()
 //        let vc = ImagesMapViewController()
         vc.imagesCreateByDate = listImageCreateDate[section]
+        vc.listImageCreateDate = listImageCreateDate
         navigationController?.pushViewController(vc, animated: true)
     }
 }
