@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     var listImageInfor: [ImageInfor] = []
     var listImageHasLocation: [ImagesCreateByDate] = []
     var listImageCreateDate = [ImagesCreateByDate]()
+    var assets: [PHAsset] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,35 +36,87 @@ class HomeViewController: UIViewController {
         let imageManager = PHImageManager()
         let requestOption = PHImageRequestOptions()
         requestOption.isSynchronous = true
-        requestOption.deliveryMode = .highQualityFormat
+        requestOption.deliveryMode = .fastFormat
+//        requestOption.resizeMode = .fast
+//        requestOption.version = .current
         
         let fetchOptions = PHFetchOptions()
         fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         let fetchResult: PHFetchResult = PHAsset.fetchAssets(with: .image, options: fetchOptions)
         
-        
         DispatchQueue.global(qos: .background).async{
             if fetchResult.count > 0 {
+                print("num photo: \(fetchResult.count)")
                 
                 for i in 0..<fetchResult.count {
                     let asset = fetchResult.object(at: i)
-                    imageManager.requestImage(for: asset, targetSize: CGSize(width: 105, height: 105), contentMode: .aspectFill, options: requestOption, resultHandler: { image, error in
+                    
+//                    self.assets.append(asset)
+                    print("i: \(i)")
+                    
+//                    imageManager.requestImageData(for: asset, options: requestOption, resultHandler: {
+//                         _, _, _, info in
+//                        print("info: \(info)")
+//                        if let fileName = (info?["PHImageFileURLKey"] as? NSURL)?.lastPathComponent/*, let imgData = imageData*/{
+//                            let location = asset.location
+//                            let createDate = asset.creationDate
+//                            let imagePath = info?["PHImageFileURLKey"] as? URL
+//                            let image = UIImage(data: imgData)
+
+//                            let imageData = UIImagePNGRepresentation(image!)!
+//                            let options = [
+//                                kCGImageSourceCreateThumbnailWithTransform: true,
+//                                kCGImageSourceCreateThumbnailFromImageAlways: true,
+//                                kCGImageSourceThumbnailMaxPixelSize: 150] as CFDictionary
+//                            let source = CGImageSourceCreateWithData(imageData as CFData, nil)!
+//                            let imageReference = CGImageSourceCreateThumbnailAtIndex(source, 0, options)!
+//                            let thumbnail = UIImage(cgImage: imageReference)
+//
+//                            print("location: \(location)")
+//                            print("careate date: \(createDate)")
+////                            print("image scale: \(image?.scale)")
+////                            print("image size: \(image?.size)")
+//                            print("image path: \(imagePath)")
+//                            print("///////" + fileName + "////////")
+//                            print("\n>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<\n")
+
+//                            var hasLocation = false
+//                            if location != nil{
+//                                hasLocation = true
+//                            }else{
+//                                hasLocation = false
+//                            }
+//                            let imgInfor = ImageInfor(location: location, date: createDate, img: image!, imagePath: imagePath!, hasLocation: hasLocation)
+//                            self.listImageInfor.append(imgInfor)
+//                        }
+//                    })
+                
+                    
+                    imageManager.requestImage(for: asset, targetSize: CGSize(width: 300, height: 300), contentMode: .aspectFill, options: requestOption, resultHandler: { image, info in
+
+                        print("info: \(info)")
+                        let imagePath = info?["PHImageFileURLKey"] as? URL
+                        print("imagePath: \(imagePath)")
                         if let img = image{
+//                            print("image scale: \(img.scale)")
                             print("image size: \(img.size)")
+//                            print("path: \(asset.value(forKey:))")
+
                             let location = asset.location
                             let createDate = asset.creationDate
+
                             var hasLocation = false
                             if location != nil{
                                 hasLocation = true
                             }else{
                                 hasLocation = false
                             }
-                            let imgInfor = ImageInfor(location: location, date: createDate, img: img, hasLocation: hasLocation)
+                            let imgInfor = ImageInfor(location: location, date: createDate, img: img, imagePath: imagePath!, hasLocation: hasLocation)
                             self.listImageInfor.append(imgInfor)
 //                            print("location \(i): \(String(describing: asset.location))")
 //                            print("time picked: \(i): \(String(describing: asset.creationDate))")
-                            
-                            
+
+
                         }
                     })
                 }
@@ -73,7 +126,7 @@ class HomeViewController: UIViewController {
                     //strongSelf.listImageCreateDate = data
                     strongSelf.listImageCreateDate = strongSelf.convertDictToArray(dict: data)
                     
-                    print(strongSelf.listImageCreateDate)
+//                    print(strongSelf.listImageCreateDate)
                     DispatchQueue.main.async {
                         strongSelf.photosTableView.reloadData()
                     }
@@ -114,7 +167,7 @@ class HomeViewController: UIViewController {
     
     func classifyImageByCreateDate(listImage: [ImageInfor], completionHanler: @escaping([String: [ImageInfor]]) -> Void){
         var listDictImageCreateDate = [String: [ImageInfor]]()
-    print("number image: \(listImage.count)")
+//    print("number image: \(listImage.count)")
             for img in listImage{
                 
                 if let createDate = img.createDate{
@@ -152,7 +205,7 @@ class HomeViewController: UIViewController {
                             }
                             
                             let key = createDateStr + "\n" + place
-                            print("key: \(key)")
+                            //print("key: \(key)")
                             
                             if listDictImageCreateDate.count > 0{
                                 

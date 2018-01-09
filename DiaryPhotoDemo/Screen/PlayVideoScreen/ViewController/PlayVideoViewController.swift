@@ -21,6 +21,7 @@ class PlayVideoViewController: UIViewController {
     var asset: AVAsset!
 
     var images: [UIImage] = []
+    var imagesURL:[URL] = []
 //    var imagesCreateByDate: ImagesCreateByDate!{
 //        didSet{
 //            if let imagesInfors = imagesCreateByDate.imagesCreateByDate{
@@ -36,12 +37,28 @@ class PlayVideoViewController: UIViewController {
         super.viewDidLoad()
 
 //         Do any additional setup after loading the view.
+        getImagesFromURLs()
         buildVideoFromImageArray()
 //        initVideoFromImages(images: images)
     }
 
+    func getImagesFromURLs() ->[UIImage] {
+        for imageUrl in imagesURL{
+            
+            do {
+                let imageData = try Data(contentsOf: imageUrl)
+                let image = UIImage(data: imageData)
+                images.append(image!)
+            }
+            catch {
+                print("catastrophe loading file?? \(error)")
+                
+            }
+        }
+        return images
+    }
     func initVideoFromImages(images: [UIImage]) {
-        let settings = CreateVideoFromImages.videoSettings(codec: AVVideoCodecType.jpeg.rawValue, width: (Int(self.view.frame.width)), height: (Int(self.view.frame.height)))
+        let settings = CreateVideoFromImages.videoSettings(codec: AVVideoCodecType.h264.rawValue, width: (Int(self.view.frame.width)), height: (Int(self.view.frame.height)))
         let movieMaker = CreateVideoFromImages(videoSettings: settings)
         movieMaker.createMovieFrom(images: images){ (fileURL:URL) in
             let player = AVPlayer(url: fileURL)
@@ -54,9 +71,6 @@ class PlayVideoViewController: UIViewController {
     }
     
     func buildVideoFromImageArray() {
-//        for image in 0..<5 {
-//            selectedPhotosArray.append(UIImage(named: "\(image + 1).JPG")!) //name of the images: 1.JPG, 2.JPG, 3.JPG, 4.JPG, 5.JPG
-//        }
         
         imageArrayToVideoURL = NSURL(fileURLWithPath: NSHomeDirectory() + "/Documents/video1.MP4")
         removeFileAtURLIfExists(url: imageArrayToVideoURL)
@@ -75,6 +89,7 @@ class PlayVideoViewController: UIViewController {
         }
         if videoWriter.startWriting() {
             let zeroTime = CMTimeMake(Int64(imagesPerSecond),Int32(1))
+            print("start session: \(zeroTime)")
             videoWriter.startSession(atSourceTime: zeroTime)
             
             assert(pixelBufferAdaptor.pixelBufferPool != nil)
@@ -135,7 +150,7 @@ class PlayVideoViewController: UIViewController {
             })
         }
     }
-    
+
     func removeFileAtURLIfExists(url: NSURL) {
         if let filePath = url.path {
             let fileManager = FileManager.default
@@ -150,13 +165,16 @@ class PlayVideoViewController: UIViewController {
     }
     
     func playVideo(url: URL) {
-        let player = AVPlayer(url: url as URL)
-        let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.frame = self.view.layer.bounds
-        playerLayer.backgroundColor = UIColor.white.cgColor
-        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        self.parentView.layer.addSublayer(playerLayer)
-        player.play()
+        DispatchQueue.main.async {
+            let player = AVPlayer(url: url as URL)
+            let playerLayer = AVPlayerLayer(player: player)
+            playerLayer.frame = self.view.layer.bounds
+            playerLayer.backgroundColor = UIColor.white.cgColor
+            playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+            self.parentView.layer.addSublayer(playerLayer)
+            player.play()
+        }
+        
     }
 
     

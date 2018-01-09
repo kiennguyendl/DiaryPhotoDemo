@@ -16,13 +16,18 @@ class DetailImageViewController: UIViewController {
     @IBOutlet weak var tableViewDetail: UITableView!
     
     var images: [UIImage] = []
+    var imageURL: [URL] = []
+    
     var listImageCreateDate = [ImagesCreateByDate]()
+    var location: CLLocationCoordinate2D?
     var imagesCreateByDate: ImagesCreateByDate!{
         didSet{
             if let imagesInfors = imagesCreateByDate.imagesCreateByDate{
+                location = imagesInfors[0].location?.coordinate
                 for imageInfor in imagesInfors{
-                    if let img = imageInfor.image{
+                    if let img = imageInfor.image, let url = imageInfor.imagePath{
                         images.append(img)
+                        imageURL.append(url)
                     }
                 }
             }
@@ -68,7 +73,7 @@ extension DetailImageViewController: UITableViewDelegate, UITableViewDataSource{
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "MapCell", for: indexPath) as! MapTableViewCell
             cell.imagesCreateByDate = imagesCreateByDate
-            cell.delegate = self			
+            //cell.delegate = self
             return cell
         }
         //return UICollectionViewCell()
@@ -103,14 +108,14 @@ extension DetailImageViewController: UITableViewDelegate, UITableViewDataSource{
         return ""
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let currentSection = indexPath.section
-//        if currentSection == 1{
-//            print("kien test")
-//            let vc = ImagesMapViewController()
-//            vc.listImageCreateDate = listImageCreateDate
-//            //vc.location = location
-//            navigationController?.pushViewController(vc, animated: true)
-//        }
+        let currentSection = indexPath.section
+        if currentSection == 1{
+            print("kien test")
+            let vc = ImagesMapViewController()
+            vc.listImageCreateDate = listImageCreateDate
+            vc.location = location
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
@@ -118,16 +123,18 @@ extension DetailImageViewController: UITableViewDelegate, UITableViewDataSource{
 extension DetailImageViewController: VideoCellProtocol{
     func createVideo(images: [UIImage]) {
         let vc = PlayVideoViewController()
-        vc.images = images
+//        vc.images = images
+        vc.imagesURL = imageURL
         navigationController?.pushViewController(vc, animated: true)
     }
 }
 
-extension DetailImageViewController: MapCellProtocol{
-    func showMap(location: CLLocationCoordinate2D) {
-        let vc = ImagesMapViewController()
-        vc.listImageCreateDate = listImageCreateDate
-        vc.location = location
-        navigationController?.pushViewController(vc, animated: true)
-    }
-}
+//extension DetailImageViewController: MapCellProtocol{
+//    func showMap(location: CLLocationCoordinate2D) {
+//        let vc = ImagesMapViewController()
+//        vc.listImageCreateDate = listImageCreateDate
+//        vc.location = location
+//        navigationController?.pushViewController(vc, animated: true)
+//    }
+//}
+

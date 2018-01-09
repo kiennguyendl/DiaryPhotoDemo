@@ -129,7 +129,7 @@ extension ImagesMapViewController: GMUClusterManagerDelegate, GMSMapViewDelegate
                 break
             }
         }
-        return imageFromImages(images: images, size: CGSize(width: kImageDimension * 2, height: kImageDimension * 2))
+        return imageFromImages(images: images, size: CGSize(width: kImageDimension * 1, height: kImageDimension * 1))
     }
     
     func imageFromImages(images: [UIImage], size: CGSize) -> UIImage {
@@ -140,7 +140,7 @@ extension ImagesMapViewController: GMUClusterManagerDelegate, GMSMapViewDelegate
         UIGraphicsBeginImageContextWithOptions(size, true, 0)
         if images.count == 2 || images.count == 3{
             // Draw left half.
-            images[0].draw(in: CGRect(x: -size.width, y: 0, width: size.width, height: size.height))
+            images[0].draw(in: CGRect(x: -size.width / 4, y: 0, width: size.width, height: size.height))
         }
         
         if images.count == 2{

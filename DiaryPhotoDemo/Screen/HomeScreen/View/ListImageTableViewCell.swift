@@ -46,6 +46,7 @@ extension ListImageTableViewCell: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! ImageCollectionViewCell
         cell.imageView.image = listImage[indexPath.row].image!
+//        cell.imageView.contentMode = .scaleAspectFit
         return cell
     }
     

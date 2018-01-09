@@ -20,13 +20,13 @@ class POIItem: NSObject, GMUClusterItem {
     }
 }
 
-protocol MapCellProtocol {
-    func showMap(location: CLLocationCoordinate2D)
-}
+//protocol MapCellProtocol {
+//    func showMap(location: CLLocationCoordinate2D)
+//}
 class MapTableViewCell: UITableViewCell {
 
 //    var locationManager = CLLocationManager()
-    var delegate: MapCellProtocol?
+//    var delegate: MapCellProtocol?
     var location: CLLocationCoordinate2D?
     var images: [UIImage] = []
     
@@ -61,7 +61,7 @@ class MapTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        delegate?.showMap(location: location!)
+//        delegate?.showMap(location: location!)
     }
     
     func loadView() {

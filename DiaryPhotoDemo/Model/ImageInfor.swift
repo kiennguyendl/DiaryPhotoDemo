@@ -16,11 +16,13 @@ class ImageInfor: NSObject{
     var createDate: Date?
     var image: UIImage?
     var hasLocation: Bool?
+    var imagePath: URL?
     
-    init(location: CLLocation?, date: Date?, img: UIImage, hasLocation: Bool){
+    init(location: CLLocation?, date: Date?, img: UIImage, imagePath: URL, hasLocation: Bool){
         self.location = location
         self.createDate = date
         self.image = img
         self.hasLocation = hasLocation
+        self.imagePath = imagePath
     }
 }
